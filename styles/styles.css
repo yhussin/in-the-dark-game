@@ -1,0 +1,31 @@
+
+.game-container {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    height: 500px;
+    width: 500px;
+    background-color: lightblue;
+}
+
+#myId {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+#goal {
+    height: 100px;
+    width: 100px;
+    background-color: yellowgreen;
+    position: fixed;
+    top: 250px;
+    left: 475px;
+}
+
+#rect1 {
+ background-color: forestgreen;
+}
