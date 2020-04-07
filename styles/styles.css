@@ -11,16 +11,16 @@ h1 {
     bottom: 60px;
     height: 100%;
     width: 100%;
-    background-color: lightblue;
+    background-color: black;
 }
 
 #playerIcon {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     background-color: blue;
 }
 
-.hitclass {
+.hitClass {
     height: 100px;
     width: 100px;
     background-color: orange;
@@ -31,8 +31,17 @@ h1 {
     width: 100px;
     background-color: yellowgreen;
     position: fixed;
-    top: 250px;
-    left: 475px;
+    top: 550px;
+    left: 675px;
+}
+
+#obstacle {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: fixed;
+    top: 350px;
+    left: 375px;
 }
 
 #rect1 {
