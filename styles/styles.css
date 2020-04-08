@@ -23,8 +23,6 @@ body {
     position: fixed;
     top: 160px;
     left: 0;
-    right: 15px;
-    bottom: 60px;
     height: 100%;
     width: 100%;
     background-color: black; 
@@ -89,6 +87,7 @@ body {
     top: 550px;
     left: 675px;
     opacity: 0.4;
+    filter: blur(8px);
 }
 
 .obstacle {
@@ -102,13 +101,14 @@ body {
 .obstacleHit {
     width:0; 
     height:75px; 
-    border-right:50px solid blue;
-    border-left:50px solid blue;
+    border-right:50px solid red;
+    border-left:50px solid red;
     border-bottom:30px solid transparent;
     position: fixed;
     top: 350px;
     left: 375px;
     opacity: 0.4;
+    filter: blur(8px);
 }
 
 .gameoverHidden {
