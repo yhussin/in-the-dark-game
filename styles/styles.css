@@ -1,6 +1,22 @@
 
 h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
     text-align: center;
+    color: whitesmoke;
+    /* border: solid white 2px; */
+    margin: 15px 0 0 0;
+}
+
+header {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+body {
+    background-color: rgb(75, 74, 74);
 }
 
 .game-container {
@@ -11,7 +27,7 @@ h1 {
     bottom: 60px;
     height: 100%;
     width: 100%;
-    /* background-color: black; */
+    background-color: black; 
 }
 
 
@@ -29,24 +45,39 @@ h1 {
 }
 
 
-#goal {
+.goal {
     height: 100px;
     width: 100px;
-    background-color: yellowgreen;
+    background-color: black;
     position: fixed;
     top: 550px;
     left: 675px;
 }
 
-#obstacle {
+.goalHit {
     height: 100px;
     width: 100px;
     background-color: red;
+    position: fixed;
+    top: 550px;
+    left: 675px;
+}
+
+.obstacle {
+    height: 100px;
+    width: 100px;
+    background-color: black;
     position: fixed;
     top: 350px;
     left: 375px;
 }
 
-#rect1 {
- background-color: forestgreen;
+.obstacleHit {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: fixed;
+    top: 350px;
+    left: 375px;
 }
+
