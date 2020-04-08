@@ -4,7 +4,6 @@ h1 {
     font-size: 45px;
     text-align: center;
     color: whitesmoke;
-    /* border: solid white 2px; */
     margin: 15px 0 0 0;
 }
 
@@ -13,6 +12,7 @@ header {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     color: whitesmoke;
+    border: solid rgba(255, 255, 255, 0.3) 2px;
 }
 
 body {
@@ -28,14 +28,40 @@ body {
     height: 100%;
     width: 100%;
     background-color: black; 
+
+    animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 50s; /* Chrome and Safari */
+    }
+
+@keyframes colorchange
+{
+0%   {background: rgb(28, 28, 28);}
+25%  {background: rgb(0, 0, 0);}
+50%  {background: rgb(28, 28, 28);}
+75%  {background: rgb(26, 0, 0);}
+100% {background: rgb(0, 0, 0);}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+    0%   {background: rgb(28, 28, 28);}
+    25%  {background: rgb(0, 0, 0);}
+    50%  {background: rgb(28, 28, 28);}
+    75%  {background: rgb(26, 0, 0);}
+    100% {background: rgb(0, 0, 0);}
 }
 
 
 
 .playerIcon {
-    height: 75px;
-    width: 75px;
-    background-color: blue;
+    width:0;
+    height:0;
+    border-right:50px solid transparent;
+    border-top:50px solid rgb(67, 19, 67);
+    border-left:50px solid rgb(67, 19, 67);
+    border-bottom:50px solid rgb(67, 19, 67);
+    border-radius: 50%;
 }
 
 .hitClass {
@@ -48,37 +74,41 @@ body {
 .goal {
     height: 100px;
     width: 100px;
-    background-color: black;
     position: fixed;
     top: 550px;
     left: 675px;
 }
 
 .goalHit {
-    height: 100px;
-    width: 100px;
-    background-color: red;
+    width:0; 
+    height:75px; 
+    border-right:50px solid yellow;
+    border-left:50px solid yellow;
+    border-bottom:30px solid transparent;
     position: fixed;
     top: 550px;
     left: 675px;
+    opacity: 0.4;
 }
 
 .obstacle {
     height: 100px;
     width: 100px;
-    background-color: black;
     position: fixed;
     top: 350px;
     left: 375px;
 }
 
 .obstacleHit {
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
+    width:0; 
+    height:75px; 
+    border-right:50px solid blue;
+    border-left:50px solid blue;
+    border-bottom:30px solid transparent;
     position: fixed;
     top: 350px;
     left: 375px;
+    opacity: 0.4;
 }
 
 .gameoverHidden {
@@ -103,6 +133,7 @@ body {
     font-family: 'Amatic SC', cursive;
     color: red;
     opacity: 1;
+    background-color: green;
 }
 
 .youwinHidden {
@@ -127,4 +158,5 @@ body {
     font-family: 'Amatic SC', cursive;
     color: red;
     opacity: 1;
+    background-color: green;
 }

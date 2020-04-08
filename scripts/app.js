@@ -1,4 +1,10 @@
 
+
+
+
+let backgroundSound = new Audio('zapsplat_horror.mp3');
+backgroundSound.play();
+
 //code snippet: Consistently Move an Element with Arrow Keys in JavaScript
 document.onkeydown = detectKey;
 function detectKey(e) {
@@ -22,6 +28,8 @@ function detectKey(e) {
         document.querySelector('.playerIcon').style.marginLeft = (posLeft + 58) + "px";
     }
 
+
+
     let player = document.querySelector('.playerIcon');
     let positionPlayer = player.getBoundingClientRect();
     console.log("player is at " + positionPlayer.x, positionPlayer.y)
@@ -29,10 +37,8 @@ function detectKey(e) {
     //collision detection
     //From MDN
     function collision() {
-        let rect1 = { x: positionPlayer.x, y: positionPlayer.y, width: 10, height: 10 };
-        //var rect1 = {x: 5, y: 5, width: 50, height: 50};
-        let rect2 = { x: 348, y: 334, width: 50, height: 50 };
-        //let rect2 = {x: 20, y: 10, width: 10, height: 10};
+        let rect1 = { x: positionPlayer.x, y: positionPlayer.y, width: 20, height: 20 };
+        let rect2 = { x: 348, y: 334, width: 100, height: 100 };
         let rect3 = { x: 648, y: 524, width: 50, height: 50 };
 
         if (rect1.x < rect2.x + rect2.width &&
@@ -72,7 +78,5 @@ function detectKey(e) {
     collision()
 };
 
-// let player1 = document.querySelector('.playerIcon');
-// let positionPlayer1 = player1.getBoundingClientRect();
 
 
