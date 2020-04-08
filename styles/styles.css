@@ -11,20 +11,23 @@ h1 {
     bottom: 60px;
     height: 100%;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
 }
 
-#playerIcon {
+
+
+.playerIcon {
     height: 75px;
     width: 75px;
     background-color: blue;
 }
 
 .hitClass {
-    height: 100px;
-    width: 100px;
-    background-color: orange;
+    height: 75px;
+    width: 75px;
+    background-color: black;
 }
+
 
 #goal {
     height: 100px;
