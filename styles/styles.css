@@ -81,3 +81,50 @@ body {
     left: 375px;
 }
 
+.gameoverHidden {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 150px;
+    font-family: 'Amatic SC', cursive;
+    color: blue;
+    opacity: 0;
+}
+
+.gameover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 150px;
+    font-family: 'Amatic SC', cursive;
+    color: red;
+    opacity: 1;
+}
+
+.youwinHidden {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 150px;
+    font-family: 'Amatic SC', cursive;
+    color: blue;
+    opacity: 0;
+}
+
+.youwin {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 150px;
+    font-family: 'Amatic SC', cursive;
+    color: red;
+    opacity: 1;
+}

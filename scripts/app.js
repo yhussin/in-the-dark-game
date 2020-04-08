@@ -43,6 +43,9 @@ function detectKey(e) {
             console.log("collision is here")
             let obstacleWhenHit = document.querySelector(".obstacle");
             obstacleWhenHit.classList.add("obstacleHit");
+
+            let gameoverScreen = document.querySelector(".gameoverHidden");
+            gameoverScreen.classList.add("gameover");
         }
 
         if (rect1.x < rect3.x + rect3.width &&
@@ -53,6 +56,9 @@ function detectKey(e) {
             console.log("second collision is here")
             let goalWhenHit = document.querySelector(".goal");
             goalWhenHit.classList.add("goalHit");
+
+            let youwinScreen = document.querySelector(".youwinHidden");
+            youwinScreen.classList.add("youwin");
         };
 
         // filling in the values =>
