@@ -2,10 +2,14 @@
 
 
 
-
+document.onkeydown = detectKey;
+// function soundB () {
+//    let backgroundSound = new Audio('sounds/zapsplat_horror.mp3');
+//    backgroundSound.play(); 
+// }
+// soundB();
 
 //code snippet: Consistently Move an Element with Arrow Keys in JavaScript
-document.onkeydown = detectKey;
 function detectKey(e) {
     let posLeft = document.querySelector('.playerIcon').offsetLeft;
     let posTop = document.querySelector('.playerIcon').offsetTop;
@@ -26,7 +30,6 @@ function detectKey(e) {
         // right arrow
         document.querySelector('.playerIcon').style.marginLeft = (posLeft + 58) + "px";
     }
-
 
 
     let player = document.querySelector('.playerIcon');
@@ -52,11 +55,12 @@ function detectKey(e) {
             let gameoverScreen = document.querySelector(".gameoverHidden");
             gameoverScreen.classList.add("gameover");
 
-            let gameoverSound = new Audio('zapsplat_gameover.mp3');
+            let gameoverSound = new Audio('sounds/zapsplat_gameover.mp3');
             gameoverSound.play();
-            
+
+            document.onkeydown = null;
             return;
-        } 
+        }
 
         if (rect1.x < rect3.x + rect3.width &&
             rect1.x + rect1.width > rect3.x &&
@@ -70,6 +74,10 @@ function detectKey(e) {
             let youwinScreen = document.querySelector(".youwinHidden");
             youwinScreen.classList.add("youwin");
 
+            let youwinSound = new Audio('sounds/zapsplat_youwin.mp3');
+            youwinSound.play();
+
+            document.onkeydown = null;
             return;
         };
 
@@ -82,8 +90,8 @@ function detectKey(e) {
         };
     };
     collision()
+
 };
 
 
-let backgroundSound = new Audio('zapsplat_horror.mp3');
-backgroundSound.play();
+
