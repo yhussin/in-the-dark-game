@@ -31,6 +31,17 @@ body {
     opacity: 1;
 }
 
+.startButtonHidden {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px; 
+    font-size: 150px;
+    font-family: 'Amatic SC', cursive;
+    opacity: 0;
+}
+
 .game-container {
     position: fixed;
     top: 160px;
@@ -117,6 +128,27 @@ body {
     position: fixed;
     top: 350px;
     left: 375px;
+    opacity: 0.4;
+    filter: blur(8px);
+}
+
+.obstacle2 {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 350px;
+    left: 375px;
+}
+
+.obstacleHit2 {
+    width:0; 
+    height:75px; 
+    border-right:50px solid red;
+    border-left:50px solid red;
+    border-bottom:30px solid transparent;
+    position: fixed;
+    top: 225px;
+    left: 840px;
     opacity: 0.4;
     filter: blur(8px);
 }

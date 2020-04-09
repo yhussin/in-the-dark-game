@@ -1,7 +1,6 @@
 
 
 
-
 document.onkeydown = detectKey;
 // function soundB () {
 //    let backgroundSound = new Audio('sounds/zapsplat_horror.mp3');
@@ -11,6 +10,10 @@ document.onkeydown = detectKey;
 
 //code snippet: Consistently Move an Element with Arrow Keys in JavaScript
 function detectKey(e) {
+
+    let startButton = document.querySelector(".startButton");
+    startButton.classList.add("startButtonHidden");
+
     let posLeft = document.querySelector('.playerIcon').offsetLeft;
     let posTop = document.querySelector('.playerIcon').offsetTop;
     e = e || window.event;
@@ -42,6 +45,8 @@ function detectKey(e) {
         let rect1 = { x: positionPlayer.x, y: positionPlayer.y, width: 20, height: 20 };
         let rect2 = { x: 348, y: 334, width: 100, height: 100 };
         let rect3 = { x: 648, y: 524, width: 50, height: 50 };
+        let rect4 = { x: 870, y: 218, width: 50, height: 50 };
+
 
         if (rect1.x < rect2.x + rect2.width &&
             rect1.x + rect1.width > rect2.x &&
@@ -51,6 +56,25 @@ function detectKey(e) {
             console.log("collision is here")
             let obstacleWhenHit = document.querySelector(".obstacle");
             obstacleWhenHit.classList.add("obstacleHit");
+
+            let gameoverScreen = document.querySelector(".gameoverHidden");
+            gameoverScreen.classList.add("gameover");
+
+            let gameoverSound = new Audio('sounds/zapsplat_gameover.mp3');
+            gameoverSound.play();
+
+            document.onkeydown = null;
+            return;
+        }
+
+        if (rect1.x < rect4.x + rect4.width &&
+            rect1.x + rect1.width > rect4.x &&
+            rect1.y < rect4.y + rect4.height &&
+            rect1.y + rect1.height > rect4.y) {
+            // collision detected!
+            console.log("collision is here")
+            let obstacleWhenHit = document.querySelector(".obstacle2");
+            obstacleWhenHit.classList.add("obstacleHit2");
 
             let gameoverScreen = document.querySelector(".gameoverHidden");
             gameoverScreen.classList.add("gameover");
