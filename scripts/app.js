@@ -1,15 +1,25 @@
 
 
 
+
+let soundIsNotPlaying = true;
+function soundB () {
+    let backgroundSound = new Audio('sounds/zapsplat_horror.mp3');
+    //backgroundSound.volume = 0.2;  //not working
+    backgroundSound.play(); 
+ }
+
 document.onkeydown = detectKey;
-// function soundB () {
-//    let backgroundSound = new Audio('sounds/zapsplat_horror.mp3');
-//    backgroundSound.play(); 
-// }
-// soundB();
 
 //code snippet: Consistently Move an Element with Arrow Keys in JavaScript
 function detectKey(e) {
+
+    
+    if (soundIsNotPlaying) {
+    soundB();
+    soundIsNotPlaying = false
+    }
+    
 
     let startButton = document.querySelector(".startButton");
     startButton.classList.add("startButtonHidden");
@@ -116,6 +126,3 @@ function detectKey(e) {
     collision()
 
 };
-
-
-
