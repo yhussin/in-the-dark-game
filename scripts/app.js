@@ -1,26 +1,20 @@
 
-
-
-
 let soundIsNotPlaying = true;
 function soundB () {
     let backgroundSound = new Audio('sounds/zapsplat_horror.mp3');
-    //backgroundSound.volume = 0.2;  //not working
+    backgroundSound.volume = 0.1; 
     backgroundSound.play(); 
  }
 
 document.onkeydown = detectKey;
-
-//code snippet: Consistently Move an Element with Arrow Keys in JavaScript
 function detectKey(e) {
-
     
     if (soundIsNotPlaying) {
     soundB();
     soundIsNotPlaying = false
     }
     
-
+//code snippet for using keyboard arrows from: Consistently Move an Element with Arrow Keys in JavaScript
     let startButton = document.querySelector(".startButton");
     startButton.classList.add("startButtonHidden");
 
@@ -44,7 +38,6 @@ function detectKey(e) {
         document.querySelector('.playerIcon').style.marginLeft = (posLeft + 58) + "px";
     }
 
-
     let player = document.querySelector('.playerIcon');
     let positionPlayer = player.getBoundingClientRect();
     console.log("player is at " + positionPlayer.x, positionPlayer.y)
@@ -62,7 +55,6 @@ function detectKey(e) {
             rect1.x + rect1.width > rect2.x &&
             rect1.y < rect2.y + rect2.height &&
             rect1.y + rect1.height > rect2.y) {
-            // collision detected!
             console.log("collision is here")
             let obstacleWhenHit = document.querySelector(".obstacle");
             obstacleWhenHit.classList.add("obstacleHit");
@@ -81,7 +73,6 @@ function detectKey(e) {
             rect1.x + rect1.width > rect4.x &&
             rect1.y < rect4.y + rect4.height &&
             rect1.y + rect1.height > rect4.y) {
-            // collision detected!
             console.log("collision is here")
             let obstacleWhenHit = document.querySelector(".obstacle2");
             obstacleWhenHit.classList.add("obstacleHit2");
@@ -100,7 +91,6 @@ function detectKey(e) {
             rect1.x + rect1.width > rect3.x &&
             rect1.y < rect3.y + rect3.height &&
             rect1.y + rect1.height > rect3.y) {
-            // collision detected!
             console.log("second collision is here")
             let goalWhenHit = document.querySelector(".goal");
             goalWhenHit.classList.add("goalHit");
@@ -115,12 +105,10 @@ function detectKey(e) {
             return;
         };
 
-        // filling in the values =>
         if (5 < 30 &&
             55 > 20 &&
             5 < 20 &&
             55 > 10) {
-            // collision detected!
         };
     };
     collision()
