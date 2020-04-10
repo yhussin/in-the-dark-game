@@ -55,7 +55,7 @@ function detectKey(e) {
         let rect1 = { x: positionPlayer.x, y: positionPlayer.y, width: 20, height: 20 };
         let rect2 = { x: 348, y: 334, width: 100, height: 100 };
         let rect3 = { x: 648, y: 524, width: 50, height: 50 };
-        let rect4 = { x: 870, y: 218, width: 50, height: 50 };
+        let rect4 = { x: 850, y: 218, width: 100, height: 100 };
 
 
         if (rect1.x < rect2.x + rect2.width &&
